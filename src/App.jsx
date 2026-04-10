@@ -81,7 +81,7 @@ export default function App() {
     enviarMensagem(texto);
   }
 
-  const whatsappLink = `https://wa.me/5512981113281?text=${encodeURIComponent(
+  const whatsappLink = `https://wa.me/5512992107776?text=${encodeURIComponent(
     `Olá, sou ${lead.nome || "cliente"}.\nTenho interesse em: ${
       lead.necessidade || "orçamento"
     }.\nMeu telefone é: ${lead.telefone || ""}`
