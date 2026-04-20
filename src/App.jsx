@@ -12,15 +12,15 @@ export default function App() {
   const [messages, setMessages] = useState([
     {
       role: "bot",
-      text: "Olá! Seja bem-vindo à Casa Silva.",
+      text: "Olá! Seja bem-vindo à ARTES E FERRADURAS.",
     },
     {
       role: "bot",
-      text: "Sou seu assistente virtual e posso agilizar seu atendimento com orçamento, materiais e entrega.",
+      text: "Sou seu assistente virtual e posso agilizar seu atendimento com peças artesanais, itens decorativos e produtos personalizados.",
     },
     {
       role: "bot",
-      text: "Para começar, me diga o que você precisa. Exemplo: fios, chuveiro, cimento, tintas ou ferragens.",
+      text: "Para começar, me diga o que você procura. Exemplo: tacho, porta alianças, cabide, porta vinhos, lustre ou peça personalizada.",
     },
   ]);
 
@@ -31,15 +31,187 @@ export default function App() {
   function tratarNecessidade(texto) {
     const text = texto.toLowerCase();
 
-    if (text.includes("cimento")) return "Perfeito. Já identifiquei interesse em cimento.";
-    if (text.includes("tijolo")) return "Ótimo. Já identifiquei interesse em tijolos.";
-    if (text.includes("fio") || text.includes("cabo")) return "Perfeito. Já identifiquei interesse em fios e cabos.";
-    if (text.includes("chuveiro")) return "Ótimo. Já identifiquei interesse em chuveiros.";
-    if (text.includes("tinta") || text.includes("lixa")) return "Perfeito. Já identifiquei interesse em tintas e acabamento.";
-    if (text.includes("cano") || text.includes("hidrául")) return "Ótimo. Já identifiquei interesse em materiais hidráulicos.";
-    if (text.includes("ferragem") || text.includes("ferramenta")) return "Perfeito. Já identifiquei interesse em ferragens e ferramentas.";
+    if (text.includes("coador de café") || text.includes("coador")) {
+      return "Perfeito. Já identifiquei interesse em coador de café.";
+    }
 
-    return "Perfeito. Já registrei sua necessidade.";
+    if (text.includes("guardanapo")) {
+      return "Ótimo. Já identifiquei interesse em guardanapo ou suporte relacionado.";
+    }
+
+    if (text.includes("porta louças") || text.includes("porta louca") || text.includes("porta loucas")) {
+      return "Perfeito. Já identifiquei interesse em porta louças.";
+    }
+
+    if (text.includes("papel toalha") || text.includes("suporte para papel toalha")) {
+      return "Ótimo. Já identifiquei interesse em suporte para papel toalha.";
+    }
+
+    if (
+      text.includes("tábua") ||
+      text.includes("tabua") ||
+      text.includes("tábuas de corte") ||
+      text.includes("tabuas de corte")
+    ) {
+      return "Perfeito. Já identifiquei interesse em tábuas de corte luxo.";
+    }
+
+    if (text.includes("tacho")) {
+      return "Perfeito. Já identifiquei interesse em tacho artesanal. Se quiser, posso registrar o tamanho desejado, como 65, 70, 75 ou 85 de diâmetro.";
+    }
+
+    if (text.includes("fogareiro") || text.includes("tripé") || text.includes("tripe")) {
+      return "Ótimo. Já identifiquei interesse em tripé fogareiro flex para álcool ou gás.";
+    }
+
+    if (text.includes("marcador de truco")) {
+      return "Perfeito. Já identifiquei interesse em marcador de truco.";
+    }
+
+    if (text.includes("porta alianças") || text.includes("porta aliancas")) {
+      return "Ótimo. Já identifiquei interesse em porta alianças.";
+    }
+
+    if (text.includes("casco porta aliança") || text.includes("casco porta alianca")) {
+      return "Perfeito. Já identifiquei interesse em casco porta aliança.";
+    }
+
+    if (text.includes("quadro para marcar casamento") || text.includes("quadro casamento")) {
+      return "Ótimo. Já identifiquei interesse em quadro para marcar casamento.";
+    }
+
+    if (text.includes("suporte para mini arranjos") || text.includes("mini arranjos")) {
+      return "Perfeito. Já identifiquei interesse em suporte para mini arranjos.";
+    }
+
+    if (text.includes("moldura") || text.includes("molduras para espelhos") || text.includes("espelho")) {
+      return "Ótimo. Já identifiquei interesse em molduras para espelhos.";
+    }
+
+    if (text.includes("sino decorativo") || text.includes("sino")) {
+      return "Perfeito. Já identifiquei interesse em sino decorativo.";
+    }
+
+    if (text.includes("placa personalizada") || text.includes("placas personalizadas") || text.includes("baia")) {
+      return "Ótimo. Já identifiquei interesse em placas personalizadas para baias de cavalo.";
+    }
+
+    if (text.includes("placas de homenagem") || text.includes("placa de homenagem")) {
+      return "Perfeito. Já identifiquei interesse em placas de homenagem.";
+    }
+
+    if (text.includes("porta retrato")) {
+      return "Ótimo. Já identifiquei interesse em porta retrato.";
+    }
+
+    if (text.includes("cabeça de cavalo") || text.includes("cabeca de cavalo")) {
+      return "Perfeito. Já identifiquei interesse em cabeça de cavalo decorativa.";
+    }
+
+    if (text.includes("porta alianças porta cavalos") || text.includes("porta aliancas porta cavalos")) {
+      return "Ótimo. Já identifiquei interesse em porta alianças estilo porta cavalos.";
+    }
+
+    if (text.includes("porta chaves") || text.includes("porta-chave")) {
+      return "Perfeito. Já identifiquei interesse em porta chaves personalizado ou temático.";
+    }
+
+    if (text.includes("cabide violão") || text.includes("cabide viola") || text.includes("cabide violao")) {
+      return "Ótimo. Já identifiquei interesse em cabide personalizado para violão ou viola.";
+    }
+
+    if (text.includes("cabides multiusos") || text.includes("cabides e prateleiras") || text.includes("cabide")) {
+      return "Perfeito. Já identifiquei interesse em cabides, suportes ou prateleiras.";
+    }
+
+    if (text.includes("laços") || text.includes("lacos")) {
+      return "Ótimo. Já identifiquei interesse em cabide para laços.";
+    }
+
+    if (text.includes("espingarda")) {
+      return "Perfeito. Já identifiquei interesse em suporte para espingarda.";
+    }
+
+    if (text.includes("berrante")) {
+      return "Ótimo. Já identifiquei interesse em suporte para berrante.";
+    }
+
+    if (text.includes("chapéu") || text.includes("chapeu")) {
+      return "Perfeito. Já identifiquei interesse em cabide para chapéus.";
+    }
+
+    if (text.includes("porta botas") || text.includes("bota")) {
+      return "Ótimo. Já identifiquei interesse em porta botas.";
+    }
+
+    if (text.includes("organizador") || text.includes("decorador")) {
+      return "Perfeito. Já identifiquei interesse em organizador e decorador.";
+    }
+
+    if (text.includes("prateleira") || text.includes("estante")) {
+      return "Ótimo. Já identifiquei interesse em estantes e prateleiras.";
+    }
+
+    if (text.includes("abajur")) {
+      return "Perfeito. Já identifiquei interesse em mini abajur luxo.";
+    }
+
+    if (text.includes("lustre")) {
+      return "Ótimo. Já identifiquei interesse em lustre circular com 4 lâmpadas ou modelo personalizado.";
+    }
+
+    if (text.includes("puxador colonial") || text.includes("puxador")) {
+      return "Perfeito. Já identifiquei interesse em puxador colonial.";
+    }
+
+    if (text.includes("trinco") || text.includes("ferrolho")) {
+      return "Ótimo. Já identifiquei interesse em trinco ou ferrolho.";
+    }
+
+    if (
+      text.includes("números forjados") ||
+      text.includes("numeros forjados") ||
+      text.includes("número forjado") ||
+      text.includes("numero forjado")
+    ) {
+      return "Perfeito. Já identifiquei interesse em números forjados personalizados para residência.";
+    }
+
+    if (text.includes("banheiro") || text.includes("acessorios para banheiros")) {
+      return "Ótimo. Já identifiquei interesse em acessórios para banheiro.";
+    }
+
+    if (text.includes("porta toalha") || text.includes("toalhas") || text.includes("toalha de rosto")) {
+      return "Perfeito. Já identifiquei interesse em porta toalhas ou apoio para toalha de rosto.";
+    }
+
+    if (text.includes("papel higiênico") || text.includes("papel higienico")) {
+      return "Ótimo. Já identifiquei interesse em porta papel higiênico.";
+    }
+
+    if (
+      text.includes("vinho") ||
+      text.includes("vinhos") ||
+      text.includes("taças") ||
+      text.includes("tacas") ||
+      text.includes("adega")
+    ) {
+      return "Perfeito. Já identifiquei interesse em apoio para vinhos, porta vinhos ou adega de parede.";
+    }
+
+    if (text.includes("abridor de garrafas") || text.includes("abridor")) {
+      return "Ótimo. Já identifiquei interesse em abridor de garrafas.";
+    }
+
+    if (text.includes("saca rolhas") || text.includes("saca-rolhas")) {
+      return "Perfeito. Já identifiquei interesse em saca-rolhas personalizado ou de luxo.";
+    }
+
+    if (text.includes("chaveiro abridor") || text.includes("chaveiros abridor")) {
+      return "Ótimo. Já identifiquei interesse em chaveiro abridor.";
+    }
+
+    return "Perfeito. Já registrei seu interesse em uma peça da ARTES E FERRADURAS. Agora me diga mais detalhes do item que você procura.";
   }
 
   function enviarMensagem(textoManual) {
@@ -57,13 +229,13 @@ export default function App() {
       setLead((prev) => ({ ...prev, nome: texto }));
       addMessage(
         "bot",
-        `Perfeito, ${texto}. Agora informe seu WhatsApp com DDD para que nossa equipe comercial finalize seu atendimento e envie o orçamento.`
+        `Perfeito, ${texto}. Agora informe seu WhatsApp com DDD para que nossa equipe finalize seu atendimento e envie mais detalhes do seu pedido.`
       );
       setStep("telefone");
     } else if (step === "telefone") {
       setLead((prev) => ({ ...prev, telefone: texto }));
       addMessage("bot", "Perfeito. Seu atendimento foi registrado com sucesso.");
-      addMessage("bot", "Nossa equipe comercial pode continuar seu atendimento e preparar seu orçamento completo.");
+      addMessage("bot", "Agora você pode continuar diretamente com nossa equipe pelo WhatsApp.");
       setStep("final");
     }
 
@@ -81,11 +253,13 @@ export default function App() {
     enviarMensagem(texto);
   }
 
-  const whatsappLink = `https://wa.me/5512992107776?text=${encodeURIComponent(
+  const whatsappLink = `https://wa.me/5512981113281?text=${encodeURIComponent(
     `Olá, sou ${lead.nome || "cliente"}.\nTenho interesse em: ${
-      lead.necessidade || "orçamento"
+      lead.necessidade || "produto personalizado"
     }.\nMeu telefone é: ${lead.telefone || ""}`
   )}`;
+
+  const isMobile = typeof window !== "undefined" ? window.innerWidth < 900 : false;
 
   return (
     <div
@@ -93,7 +267,7 @@ export default function App() {
         minHeight: "100vh",
         padding: 16,
         fontFamily: "Arial, sans-serif",
-        background: "linear-gradient(135deg, #0f172a 0%, #1e3a8a 45%, #38bdf8 100%)",
+        background: "linear-gradient(135deg, #1f2937 0%, #111827 45%, #374151 100%)",
         boxSizing: "border-box",
       }}
     >
@@ -102,7 +276,7 @@ export default function App() {
           maxWidth: 1200,
           margin: "0 auto",
           display: "grid",
-          gridTemplateColumns: "320px 1fr",
+          gridTemplateColumns: isMobile ? "1fr" : "320px 1fr",
           gap: 20,
         }}
       >
@@ -116,16 +290,16 @@ export default function App() {
         >
           <div
             style={{
-              background: "linear-gradient(135deg, #1d4ed8, #38bdf8)",
+              background: "linear-gradient(135deg, #111827, #6b7280)",
               borderRadius: 18,
               padding: 18,
               color: "#fff",
               marginBottom: 18,
             }}
           >
-            <div style={{ fontSize: 28, fontWeight: 700 }}>Casa Silva</div>
+            <div style={{ fontSize: 28, fontWeight: 700 }}>ARTES E FERRADURAS</div>
             <div style={{ marginTop: 8, lineHeight: 1.5 }}>
-              Assistente virtual para atendimento comercial, pré-orçamento e encaminhamento ao vendedor.
+              Assistente virtual para atendimento, peças artesanais, decoração e itens personalizados.
             </div>
           </div>
 
@@ -134,36 +308,32 @@ export default function App() {
               O que esta demonstração faz
             </div>
             <div style={{ color: "#334155", lineHeight: 1.7 }}>
-              Atende automaticamente, entende a necessidade do cliente, coleta nome e WhatsApp e direciona o lead pronto para o setor comercial.
+              Atende automaticamente, identifica o produto de interesse, coleta nome e WhatsApp e direciona o cliente para continuar o atendimento.
             </div>
           </div>
 
           <div style={{ marginBottom: 18 }}>
             <div style={{ fontWeight: 700, fontSize: 20, marginBottom: 10 }}>
-              Categorias atendidas
+              Principais linhas
             </div>
             <div style={{ color: "#334155", lineHeight: 1.8 }}>
-              Elétrica, hidráulica, ferragens, ferramentas, tintas, lixas, canos, chuveiros, fios, lâmpadas e materiais em geral.
+              Tachos artesanais, porta alianças, cabides, itens para banheiro, porta vinhos, suportes, lustres, molduras, placas personalizadas e decoração temática.
             </div>
           </div>
 
           <div
             style={{
-              background: "#eff6ff",
-              border: "1px solid #bfdbfe",
+              background: "#f3f4f6",
+              border: "1px solid #d1d5db",
               borderRadius: 16,
               padding: 16,
-              color: "#1e3a8a",
+              color: "#111827",
               lineHeight: 1.6,
             }}
           >
-            <strong>Endereço:</strong>
+            <strong>Dica de uso:</strong>
             <br />
-            Av. Andrômeda, 2965
-            <br />
-            Bosque dos Eucaliptos
-            <br />
-            São José dos Campos - SP
+            O cliente pode digitar o item desejado ou usar os botões rápidos para iniciar o atendimento.
           </div>
         </div>
 
@@ -181,7 +351,7 @@ export default function App() {
           <div
             style={{
               padding: 20,
-              background: "linear-gradient(90deg, #1d4ed8, #0ea5e9)",
+              background: "linear-gradient(90deg, #111827, #4b5563)",
               color: "#fff",
             }}
           >
@@ -202,17 +372,17 @@ export default function App() {
               flexWrap: "wrap",
             }}
           >
-            <button onClick={() => preencherRapido("Quero fazer um orçamento")} style={quickBtn}>
-              Orçamento
+            <button onClick={() => preencherRapido("Quero um tacho personalizado")} style={quickBtn}>
+              Tachos
             </button>
-            <button onClick={() => preencherRapido("Preciso de fios e lâmpadas")} style={quickBtn}>
-              Elétrica
+            <button onClick={() => preencherRapido("Quero porta alianças")} style={quickBtn}>
+              Porta Alianças
             </button>
-            <button onClick={() => preencherRapido("Preciso de canos e chuveiro")} style={quickBtn}>
-              Hidráulica
+            <button onClick={() => preencherRapido("Quero cabides e suportes")} style={quickBtn}>
+              Cabides
             </button>
-            <button onClick={() => preencherRapido("Quero tintas e lixas")} style={quickBtn}>
-              Tintas
+            <button onClick={() => preencherRapido("Quero porta vinhos e adegas")} style={quickBtn}>
+              Porta Vinhos
             </button>
           </div>
 
@@ -223,7 +393,7 @@ export default function App() {
               maxHeight: 420,
               overflowY: "auto",
               padding: 18,
-              background: "#f8fafc",
+              background: "#f9fafb",
             }}
           >
             {messages.map((msg, i) => (
@@ -245,7 +415,7 @@ export default function App() {
                     fontSize: 17,
                     background:
                       msg.role === "user"
-                        ? "linear-gradient(135deg, #2563eb, #0ea5e9)"
+                        ? "linear-gradient(135deg, #1f2937, #4b5563)"
                         : "#e5e7eb",
                     color: msg.role === "user" ? "#fff" : "#111827",
                   }}
@@ -267,7 +437,7 @@ export default function App() {
               <div
                 style={{
                   display: "grid",
-                  gridTemplateColumns: "1fr 140px",
+                  gridTemplateColumns: isMobile ? "1fr" : "1fr 140px",
                   gap: 12,
                 }}
               >
@@ -277,7 +447,7 @@ export default function App() {
                   onKeyDown={onKeyDown}
                   placeholder={
                     step === "inicio"
-                      ? "Descreva o que você precisa..."
+                      ? "Descreva o produto que você procura..."
                       : step === "nome"
                       ? "Digite seu nome..."
                       : "Digite seu WhatsApp com DDD..."
@@ -287,7 +457,7 @@ export default function App() {
                     padding: 16,
                     fontSize: 17,
                     borderRadius: 14,
-                    border: "2px solid #dbeafe",
+                    border: "2px solid #d1d5db",
                     outline: "none",
                     boxSizing: "border-box",
                   }}
@@ -298,7 +468,7 @@ export default function App() {
                     padding: "16px 20px",
                     borderRadius: 14,
                     border: "none",
-                    background: "linear-gradient(135deg, #1d4ed8, #0ea5e9)",
+                    background: "linear-gradient(135deg, #111827, #4b5563)",
                     color: "#fff",
                     fontWeight: 700,
                     fontSize: 16,
@@ -325,7 +495,7 @@ export default function App() {
                   fontSize: 18,
                 }}
               >
-                Falar com vendedor no WhatsApp
+                Falar no WhatsApp
               </a>
             )}
 
@@ -348,9 +518,9 @@ export default function App() {
 const quickBtn = {
   padding: "10px 14px",
   borderRadius: 999,
-  border: "1px solid #bfdbfe",
-  background: "#eff6ff",
-  color: "#1d4ed8",
+  border: "1px solid #d1d5db",
+  background: "#f3f4f6",
+  color: "#111827",
   fontWeight: 700,
   cursor: "pointer",
 };
