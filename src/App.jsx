@@ -24,27 +24,40 @@ export default function App() {
     },
   ]);
 
-  function addMessage(role, text) {
-    setMessages((prev) => [...prev, { role, text }]);
+  function addMessage(role, text, delay = 0) {
+    setTimeout(() => {
+      setMessages((prev) => [...prev, { role, text }]);
+    }, delay);
   }
 
   function tratarNecessidade(texto) {
-    const text = texto.toLowerCase();
+    const text = texto.toLowerCase().trim();
+
+    if (
+      text.includes("bom dia") ||
+      text.includes("boa tarde") ||
+      text.includes("boa noite") ||
+      text === "oi" ||
+      text === "olá" ||
+      text === "ola"
+    ) {
+      return "Olá! 👋 Seja muito bem-vindo à ARTES E FERRADURAS.\nComo posso te ajudar hoje?";
+    }
 
     if (text.includes("coador de café") || text.includes("coador")) {
-      return "Perfeito. Já identifiquei interesse em coador de café.";
+      return "Perfeito! Já identifiquei interesse em coador de café.";
     }
 
     if (text.includes("guardanapo")) {
-      return "Ótimo. Já identifiquei interesse em guardanapo ou suporte relacionado.";
+      return "Ótimo! Já identifiquei interesse em guardanapo ou suporte relacionado.";
     }
 
     if (text.includes("porta louças") || text.includes("porta louca") || text.includes("porta loucas")) {
-      return "Perfeito. Já identifiquei interesse em porta louças.";
+      return "Perfeito! Já identifiquei interesse em porta louças.";
     }
 
     if (text.includes("papel toalha") || text.includes("suporte para papel toalha")) {
-      return "Ótimo. Já identifiquei interesse em suporte para papel toalha.";
+      return "Ótimo! Já identifiquei interesse em suporte para papel toalha.";
     }
 
     if (
@@ -53,119 +66,119 @@ export default function App() {
       text.includes("tábuas de corte") ||
       text.includes("tabuas de corte")
     ) {
-      return "Perfeito. Já identifiquei interesse em tábuas de corte luxo.";
+      return "Perfeito! Já identifiquei interesse em tábuas de corte luxo.";
     }
 
     if (text.includes("tacho")) {
-      return "Perfeito. Já identifiquei interesse em tacho artesanal. Se quiser, posso registrar o tamanho desejado, como 65, 70, 75 ou 85 de diâmetro.";
+      return "Perfeito! Trabalhamos com tachos artesanais personalizados. Se quiser, posso registrar o tamanho desejado, como 65, 70, 75 ou 85 de diâmetro.";
     }
 
     if (text.includes("fogareiro") || text.includes("tripé") || text.includes("tripe")) {
-      return "Ótimo. Já identifiquei interesse em tripé fogareiro flex para álcool ou gás.";
+      return "Ótimo! Já identifiquei interesse em tripé fogareiro flex para álcool ou gás.";
     }
 
     if (text.includes("marcador de truco")) {
-      return "Perfeito. Já identifiquei interesse em marcador de truco.";
+      return "Perfeito! Já identifiquei interesse em marcador de truco.";
     }
 
     if (text.includes("porta alianças") || text.includes("porta aliancas")) {
-      return "Ótimo. Já identifiquei interesse em porta alianças.";
+      return "Ótimo! Temos modelos exclusivos de porta alianças. Você quer algo mais rústico ou personalizado?";
     }
 
     if (text.includes("casco porta aliança") || text.includes("casco porta alianca")) {
-      return "Perfeito. Já identifiquei interesse em casco porta aliança.";
+      return "Perfeito! Já identifiquei interesse em casco porta aliança.";
     }
 
     if (text.includes("quadro para marcar casamento") || text.includes("quadro casamento")) {
-      return "Ótimo. Já identifiquei interesse em quadro para marcar casamento.";
+      return "Ótimo! Já identifiquei interesse em quadro para marcar casamento.";
     }
 
     if (text.includes("suporte para mini arranjos") || text.includes("mini arranjos")) {
-      return "Perfeito. Já identifiquei interesse em suporte para mini arranjos.";
+      return "Perfeito! Já identifiquei interesse em suporte para mini arranjos.";
     }
 
     if (text.includes("moldura") || text.includes("molduras para espelhos") || text.includes("espelho")) {
-      return "Ótimo. Já identifiquei interesse em molduras para espelhos.";
+      return "Ótimo! Já identifiquei interesse em molduras para espelhos.";
     }
 
     if (text.includes("sino decorativo") || text.includes("sino")) {
-      return "Perfeito. Já identifiquei interesse em sino decorativo.";
+      return "Perfeito! Já identifiquei interesse em sino decorativo.";
     }
 
     if (text.includes("placa personalizada") || text.includes("placas personalizadas") || text.includes("baia")) {
-      return "Ótimo. Já identifiquei interesse em placas personalizadas para baias de cavalo.";
+      return "Ótimo! Já identifiquei interesse em placas personalizadas para baias de cavalo.";
     }
 
     if (text.includes("placas de homenagem") || text.includes("placa de homenagem")) {
-      return "Perfeito. Já identifiquei interesse em placas de homenagem.";
+      return "Perfeito! Já identifiquei interesse em placas de homenagem.";
     }
 
     if (text.includes("porta retrato")) {
-      return "Ótimo. Já identifiquei interesse em porta retrato.";
+      return "Ótimo! Já identifiquei interesse em porta retrato.";
     }
 
     if (text.includes("cabeça de cavalo") || text.includes("cabeca de cavalo")) {
-      return "Perfeito. Já identifiquei interesse em cabeça de cavalo decorativa.";
+      return "Perfeito! Já identifiquei interesse em cabeça de cavalo decorativa.";
     }
 
     if (text.includes("porta alianças porta cavalos") || text.includes("porta aliancas porta cavalos")) {
-      return "Ótimo. Já identifiquei interesse em porta alianças estilo porta cavalos.";
+      return "Ótimo! Já identifiquei interesse em porta alianças estilo porta cavalos.";
     }
 
     if (text.includes("porta chaves") || text.includes("porta-chave")) {
-      return "Perfeito. Já identifiquei interesse em porta chaves personalizado ou temático.";
+      return "Perfeito! Já identifiquei interesse em porta chaves personalizado ou temático.";
     }
 
     if (text.includes("cabide violão") || text.includes("cabide viola") || text.includes("cabide violao")) {
-      return "Ótimo. Já identifiquei interesse em cabide personalizado para violão ou viola.";
+      return "Ótimo! Já identifiquei interesse em cabide personalizado para violão ou viola.";
     }
 
     if (text.includes("cabides multiusos") || text.includes("cabides e prateleiras") || text.includes("cabide")) {
-      return "Perfeito. Já identifiquei interesse em cabides, suportes ou prateleiras.";
+      return "Perfeito! Temos diversos cabides, suportes e prateleiras personalizadas. Qual estilo você procura?";
     }
 
     if (text.includes("laços") || text.includes("lacos")) {
-      return "Ótimo. Já identifiquei interesse em cabide para laços.";
+      return "Ótimo! Já identifiquei interesse em cabide para laços.";
     }
 
     if (text.includes("espingarda")) {
-      return "Perfeito. Já identifiquei interesse em suporte para espingarda.";
+      return "Perfeito! Já identifiquei interesse em suporte para espingarda.";
     }
 
     if (text.includes("berrante")) {
-      return "Ótimo. Já identifiquei interesse em suporte para berrante.";
+      return "Ótimo! Já identifiquei interesse em suporte para berrante.";
     }
 
     if (text.includes("chapéu") || text.includes("chapeu")) {
-      return "Perfeito. Já identifiquei interesse em cabide para chapéus.";
+      return "Perfeito! Já identifiquei interesse em cabide para chapéus.";
     }
 
     if (text.includes("porta botas") || text.includes("bota")) {
-      return "Ótimo. Já identifiquei interesse em porta botas.";
+      return "Ótimo! Já identifiquei interesse em porta botas.";
     }
 
     if (text.includes("organizador") || text.includes("decorador")) {
-      return "Perfeito. Já identifiquei interesse em organizador e decorador.";
+      return "Perfeito! Já identifiquei interesse em organizador e decorador.";
     }
 
     if (text.includes("prateleira") || text.includes("estante")) {
-      return "Ótimo. Já identifiquei interesse em estantes e prateleiras.";
+      return "Ótimo! Já identifiquei interesse em estantes e prateleiras.";
     }
 
     if (text.includes("abajur")) {
-      return "Perfeito. Já identifiquei interesse em mini abajur luxo.";
+      return "Perfeito! Já identifiquei interesse em mini abajur luxo.";
     }
 
     if (text.includes("lustre")) {
-      return "Ótimo. Já identifiquei interesse em lustre circular com 4 lâmpadas ou modelo personalizado.";
+      return "Ótimo! Temos lustres artesanais e também fazemos modelos personalizados.";
     }
 
     if (text.includes("puxador colonial") || text.includes("puxador")) {
-      return "Perfeito. Já identifiquei interesse em puxador colonial.";
+      return "Perfeito! Já identifiquei interesse em puxador colonial.";
     }
 
     if (text.includes("trinco") || text.includes("ferrolho")) {
-      return "Ótimo. Já identifiquei interesse em trinco ou ferrolho.";
+      return "Ótimo! Já identifiquei interesse em trinco ou ferrolho.";
     }
 
     if (
@@ -174,19 +187,19 @@ export default function App() {
       text.includes("número forjado") ||
       text.includes("numero forjado")
     ) {
-      return "Perfeito. Já identifiquei interesse em números forjados personalizados para residência.";
+      return "Perfeito! Já identifiquei interesse em números forjados personalizados para residência.";
     }
 
     if (text.includes("banheiro") || text.includes("acessorios para banheiros")) {
-      return "Ótimo. Já identifiquei interesse em acessórios para banheiro.";
+      return "Ótimo! Já identifiquei interesse em acessórios para banheiro.";
     }
 
     if (text.includes("porta toalha") || text.includes("toalhas") || text.includes("toalha de rosto")) {
-      return "Perfeito. Já identifiquei interesse em porta toalhas ou apoio para toalha de rosto.";
+      return "Perfeito! Já identifiquei interesse em porta toalhas ou apoio para toalha de rosto.";
     }
 
     if (text.includes("papel higiênico") || text.includes("papel higienico")) {
-      return "Ótimo. Já identifiquei interesse em porta papel higiênico.";
+      return "Ótimo! Já identifiquei interesse em porta papel higiênico.";
     }
 
     if (
@@ -196,46 +209,61 @@ export default function App() {
       text.includes("tacas") ||
       text.includes("adega")
     ) {
-      return "Perfeito. Já identifiquei interesse em apoio para vinhos, porta vinhos ou adega de parede.";
+      return "Perfeito! Trabalhamos com apoio para vinhos, porta vinhos, porta taças e adegas de parede.";
     }
 
     if (text.includes("abridor de garrafas") || text.includes("abridor")) {
-      return "Ótimo. Já identifiquei interesse em abridor de garrafas.";
+      return "Ótimo! Já identifiquei interesse em abridor de garrafas.";
     }
 
     if (text.includes("saca rolhas") || text.includes("saca-rolhas")) {
-      return "Perfeito. Já identifiquei interesse em saca-rolhas personalizado ou de luxo.";
+      return "Perfeito! Já identifiquei interesse em saca-rolhas personalizado ou de luxo.";
     }
 
     if (text.includes("chaveiro abridor") || text.includes("chaveiros abridor")) {
-      return "Ótimo. Já identifiquei interesse em chaveiro abridor.";
+      return "Ótimo! Já identifiquei interesse em chaveiro abridor.";
     }
 
-    return "Perfeito. Já registrei seu interesse em uma peça da ARTES E FERRADURAS. Agora me diga mais detalhes do item que você procura.";
+    return "Perfeito! Já registrei seu interesse em uma peça da ARTES E FERRADURAS. Agora me diga mais detalhes do item que você procura.";
   }
 
   function enviarMensagem(textoManual) {
     const texto = (textoManual ?? input).trim();
     if (!texto) return;
 
-    addMessage("user", texto);
+    setMessages((prev) => [...prev, { role: "user", text: texto }]);
 
     if (step === "inicio") {
       setLead((prev) => ({ ...prev, necessidade: texto }));
-      addMessage("bot", tratarNecessidade(texto));
-      addMessage("bot", "Agora me informe seu nome para eu registrar seu pré-atendimento.");
+
+      addMessage("bot", tratarNecessidade(texto), 700);
+      addMessage(
+        "bot",
+        "Agora me informe seu nome para eu registrar seu atendimento.",
+        1500
+      );
+
       setStep("nome");
     } else if (step === "nome") {
       setLead((prev) => ({ ...prev, nome: texto }));
+
       addMessage(
         "bot",
-        `Perfeito, ${texto}. Agora informe seu WhatsApp com DDD para que nossa equipe finalize seu atendimento e envie mais detalhes do seu pedido.`
+        `Prazer, ${texto}! Agora me informe seu WhatsApp com DDD para nossa equipe continuar seu atendimento.`,
+        900
       );
+
       setStep("telefone");
     } else if (step === "telefone") {
       setLead((prev) => ({ ...prev, telefone: texto }));
-      addMessage("bot", "Perfeito. Seu atendimento foi registrado com sucesso.");
-      addMessage("bot", "Agora você pode continuar diretamente com nossa equipe pelo WhatsApp.");
+
+      addMessage("bot", "Perfeito. Seu atendimento foi registrado com sucesso.", 700);
+      addMessage(
+        "bot",
+        "Agora você pode continuar diretamente com nossa equipe pelo WhatsApp.",
+        1500
+      );
+
       setStep("final");
     }
 
@@ -254,9 +282,9 @@ export default function App() {
   }
 
   const whatsappLink = `https://wa.me/5512981113281?text=${encodeURIComponent(
-    `Olá, sou ${lead.nome || "cliente"}.\nTenho interesse em: ${
-      lead.necessidade || "produto personalizado"
-    }.\nMeu telefone é: ${lead.telefone || ""}`
+    `Olá, sou ${lead.nome || "cliente"}.
+Tenho interesse em: ${lead.necessidade || "produto personalizado"}.
+Meu telefone é: ${lead.telefone || ""}`
   )}`;
 
   const isMobile = typeof window !== "undefined" ? window.innerWidth < 900 : false;
