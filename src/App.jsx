@@ -281,10 +281,22 @@ export default function App() {
     enviarMensagem(texto);
   }
 
-  const whatsappLink = `https://wa.me/5512992278837?text=${encodeURIComponent(
-    `Olá, sou ${lead.nome || "cliente"}.
-Tenho interesse em: ${lead.necessidade || "produto personalizado"}.
-Meu telefone é: ${lead.telefone || ""}`
+  const mensagemWhatsapp = `Olá! 👋
+
+Tenho interesse em um produto da Artes & Ferraduras.
+
+📌 Produto: ${lead.necessidade || "[NOME]"}
+
+Vi que é artesanal e queria saber:
+
+✔️ Valor
+✔️ Prazo de produção
+✔️ Entrega para minha região
+
+Se possível, já quero fechar 👍`;
+
+  const whatsappLink = `https://wa.me/5512981113281?text=${encodeURIComponent(
+    mensagemWhatsapp
   )}`;
 
   const isMobile = typeof window !== "undefined" ? window.innerWidth < 900 : false;
