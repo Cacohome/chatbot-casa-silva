@@ -285,7 +285,7 @@ export default function App() {
 
 Produto: ${lead.necessidade || "[NOME]"}
 
-- Vi que é artesanal e gostaria de saber:
+Vi que é artesanal e gostaria de saber:
 - Valor
 - Prazo de produção
 - Entrega para minha região
