@@ -281,19 +281,16 @@ export default function App() {
     enviarMensagem(texto);
   }
 
-  const mensagemWhatsapp = `Olá! 👋
+  const mensagemWhatsapp = const mensagemWhatsapp = `Olá! Tenho interesse em um produto da Artes & Ferraduras.
 
-Tenho interesse em um produto da Artes & Ferraduras.
+Produto: ${lead.necessidade || "[NOME]"}
 
-📌 Produto: ${lead.necessidade || "[NOME]"}
+- Vi que é artesanal e gostaria de saber:
+- Valor
+- Prazo de produção
+- Entrega para minha região
 
-Vi que é artesanal e queria saber:
-
-✔️ Valor
-✔️ Prazo de produção
-✔️ Entrega para minha região
-
-Se possível, já quero fechar 👍`;
+Se estiver tudo certo, tenho interesse em fechar.`;;
 
   const whatsappLink = `https://wa.me/5512981113281?text=${encodeURIComponent(
     mensagemWhatsapp
